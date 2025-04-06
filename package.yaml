@@ -1,0 +1,17 @@
+spec-version: 0.36.0
+name: cat-rest
+version: 0.1.0
+synopsis: REST API for XMTP CatBot (catpls.eth)
+description: See README at <https://github.com/insipx/cat-rest>
+author: Andrew Plaza <andrew@andrewplaza.dev>
+maintainer: Andrew Plaza <andrew@andrewplaza.dev>
+github: insipx/cat-rest
+executable:
+  main: Main.hs
+  source-dirs: app
+  dependencies:
+    - base
+    - scotty >= 0.22
+    - wai-extra
+    - text
+    - http-types

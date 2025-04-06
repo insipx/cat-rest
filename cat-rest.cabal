@@ -1,0 +1,33 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.36.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           cat-rest
+version:        0.1.0
+synopsis:       REST API for XMTP CatBot (catpls.eth)
+description:    See README at <https://github.com/insipx/cat-rest>
+homepage:       https://github.com/insipx/cat-rest#readme
+bug-reports:    https://github.com/insipx/cat-rest/issues
+author:         Andrew Plaza <andrew@andrewplaza.dev>
+maintainer:     Andrew Plaza <andrew@andrewplaza.dev>
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/insipx/cat-rest
+
+executable cat-rest
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  build-depends:
+      base
+    , http-types
+    , scotty >=0.22
+    , text
+    , wai-extra
+  default-language: Haskell2010
