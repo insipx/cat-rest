@@ -13,5 +13,28 @@ executable:
     - base
     - scotty >= 0.22
     - wai-extra
+    - wai
     - text
-    - http-types
+    - amazonka
+    - amazonka-s3
+    - lens
+    - generic-lens
+    - uuid
+    - bytestring
+    - aeson
+    - conduit-extra
+    - directory
+    - random
+    - filepath
+    - securemem
+    - utf8-string
+  ghc-options:
+    - -Wunused-imports
+    - -Wunused-binds
+    - -Wunused-do-bind
+    - -Wunused-foralls
+    - -Wunused-local-binds
+    - -Wunused-matches
+    - -Wunused-pattern-binds
+    - -Wunused-top-binds
+    - -Wunused-type-patterns
