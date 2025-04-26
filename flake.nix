@@ -4,6 +4,7 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nix2container.url = "github:nlewo/nix2container";
   };
 
   outputs = inputs@{ flake-parts, ... }:
@@ -12,13 +13,11 @@
 
       ];
       systems = [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin" ];
-      perSystem = { pkgs, ... }: {
-        # Per-system attributes can be defined here. The self' and inputs'
-        # module parameters provide easy access to attributes of the same
-        # system.
-
-        # Equivalent to  inputs'.nixpkgs.legacyPackages.hello;
-        packages.default = pkgs.callPackage ./default.nix { };
+      perSystem = { pkgs, self', inputs', ... }: {
+        # _module.args.pkgs = import inputs.nixpkgs pkgConfig;
+        packages = {
+          default = pkgs.callPackage ./default.nix { };
+        };
         devShells.default = pkgs.callPackage ./default.nix { };
       };
       flake = {
