@@ -1,0 +1,5 @@
+# flyctl launch added from .gitignore
+**/.direnv/**
+**/dist-newstyle/**
+**/result
+fly.toml
