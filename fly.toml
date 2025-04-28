@@ -7,14 +7,21 @@ app = 'cat-rest'
 primary_region = 'den'
 
 [http_service]
-  internal_port = 8080
-  force_https = true
-  auto_stop_machines = 'stop'
-  auto_start_machines = true
-  min_machines_running = 0
-  processes = ['app']
+internal_port = 8080
+force_https = true
+auto_stop_machines = 'stop'
+auto_start_machines = true
+min_machines_running = 0
+processes = ['app']
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
+memory = '1gb'
+cpu_kind = 'shared'
+cpus = 1
+
+# [env]
+#BUCKET_ENDPOINT=$BUCKET_ENDPOINT
+#AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+#AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+#API_USER=$API_USER
+#API_PASS=$API_PASS
