@@ -19,9 +19,5 @@ memory = '1gb'
 cpu_kind = 'shared'
 cpus = 1
 
-# [env]
-#BUCKET_ENDPOINT=$BUCKET_ENDPOINT
-#AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-#AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-#API_USER=$API_USER
-#API_PASS=$API_PASS
+[build]
+dockerfile = "dev/Dockerfile"
